@@ -11,7 +11,8 @@
     "preview": "node build/index.js --preview",
     "lint": "eslint --ext .js,.vue src",
     "start": "node server.js",
-    "test": "jest"
+    "test": "jest",
+    "build": "webpack --mode production"
   },
   "husky": {
     "hooks": {

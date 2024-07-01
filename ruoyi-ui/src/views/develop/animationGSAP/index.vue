@@ -18,6 +18,7 @@
 </template>
 <script>
 import gsap from 'gsap'
+import ScrollTrigger from 'gsap'
 export default {
   data() {
     return {
@@ -25,13 +26,7 @@ export default {
     }
   },
   onload() {
-    // var browserWidthOnLoad = window.innerWidth;
-    // gsap.fromTo('.box', { x: 0 }, {
-    //   x(_, target) {
-    //     return browserWidthOnLoad - 200;
-    //   },
-    //   duration: 2,
-    // })
+
   },
   mounted() {
     gsap.fromTo('.box', { x: 0 }, {

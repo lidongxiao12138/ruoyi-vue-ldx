@@ -1,16 +1,15 @@
 <template>
-  <a-card :bordered="false">
-
+  <div>
     <body>
       <div style="width: 100%; display: flex; justify-content: center;">
         <span style="color: white; font-size: 30px; padding-top:30px;">环绕式照片墙</span>
       </div>
       <div class="ring">
         <img v-for="(imageUrl, index) in imageUrls" :key="index" :src="imageUrl"
-          placeholder="/src/assets/images/imagePlaceholder.jpeg" alt="" @click="handleClick(index)" />
+          placeholder="require('./imagePlaceholder.png')" alt="" @click="handleClick(index)" />
       </div>
     </body>
-  </a-card>
+  </div>
 </template>
 <script>
 export default {
