@@ -127,3 +127,22 @@ xss:
   excludes: /system/notice
   # 匹配链接
   urlPatterns: /system/*,/monitor/*,/tool/*
+
+magic-api:
+  web: /magic/web
+  datasource: 
+    url: jdbc:mysql://localhost:3306/web01_ldx?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    username: web01_ldx
+    password: ldx12138
+  resource:
+    #配置文件存储位置。当以classpath开头时，为只读模式
+    # location: F:/data/magic-api
+    type: database # 配置接口资源存储位置，可选file、database、redis
+    # tableName: magic_api_file # 存储表名
+    # type: test # 配置接口资源存储位置，可选file、database、redis
+    tableName: magic_api_file # 存储表名
+    # 使用database、redis存储时的key前缀
+    prefix: /magic_api
+
+    # readonly: false # 是否是只读模式
+    # location: /www/wwwroot/magic-api # 配置文件存储路径
