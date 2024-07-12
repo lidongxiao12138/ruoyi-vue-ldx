@@ -4,8 +4,8 @@
       <div style="width: 100%; display: flex; justify-content: center;">
         <span style="color: white; font-size: 30px; padding-top:30px;">环绕式照片墙</span>
       </div>
-      <div class="ring">
-        <img v-for="(imageUrl, index) in imageUrls" :key="index" :src="imageUrl"
+      <div class="ring_around">
+        <img class="image_around" v-for="(imageUrl, index) in imageUrls" :key="index" :src="imageUrl"
           placeholder="require('./imagePlaceholder.png')" alt="" @click="handleClick(index)" />
       </div>
     </body>
@@ -47,7 +47,7 @@ body {
   background: black;
   perspective: 2000px;
 }
-.ring {
+.ring_around {
   width: 100%;
   height: 100vh;
   transform-style: preserve-3d;
@@ -56,7 +56,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  img {
+  .image_around {
     position: absolute;
     $imgWidth: 400px;
     $imgHeight: 700px;
