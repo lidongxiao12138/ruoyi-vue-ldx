@@ -39,6 +39,9 @@ import VueMeta from 'vue-meta'
 import DictData from '@/components/DictData'
 
 import './preflight.css';
+// 将自动注册所有组件为全局组件
+import dataV from '@jiaminghi/data-view'
+// import { borderBox1 } from '@jiaminghi/data-view'
 
 
 // 全局方法挂载
@@ -64,6 +67,8 @@ Vue.component('ImagePreview', ImagePreview)
 Vue.use(directive)
 Vue.use(plugins)
 Vue.use(VueMeta)
+Vue.use(dataV)
+// Vue.use(borderBox1)
 DictData.install()
 
 /**

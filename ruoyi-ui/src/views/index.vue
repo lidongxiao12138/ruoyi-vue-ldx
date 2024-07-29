@@ -1,5 +1,6 @@
 <template>
-  <div ref="vantaRef" style="width:100%;height:100vh"></div>
+  <div ref="vantaRef" style="width:100%;height:100vh">
+  </div>
 </template>
 
 <script>
@@ -26,3 +27,6 @@ export default {
   },
 };
 </script>
+<style lang="less" scoped>
+
+</style>
