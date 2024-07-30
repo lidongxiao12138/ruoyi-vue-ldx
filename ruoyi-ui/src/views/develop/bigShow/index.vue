@@ -32,26 +32,25 @@
         <div class="p-5 w-3/4 flex flex-col">
           <div class="flex h-1/2">
             <div class="w-3/5 mr-10">
-              <dv-border-box-8 class="left-chart-container ">
-                <div class="flex flex-col bg-green-900" style="width:100%; height:300px">
-                  12344
-                  <dv-flyline-chart-enhanced class="bg-red-800" :config="config1" :dev="true"
-                    style="width:100%; height:300px" />
+              <dv-border-box-8 class="left-chart-container">
+                <div class="flex flex-col h-full items-center justify-center">
+                  <span class="text-2xl">飞线图</span>
+                  <dv-flyline-chart-enhanced :config="config1" :dev="true" style="width:90%; height:90%" />
                 </div>
               </dv-border-box-8>
             </div>
             <div class="w-2/5">
               <div class="h-1/2 pb-2">
-                <dv-border-box-10 class="left-chart-container ">
-                  <div class="flex flex-col pt-20">
-                    dv-border-box-3
+                <dv-border-box-10 class="left-chart-container">
+                  <div class="flex flex-col h-full items-center justify-center">
+                    <dv-scroll-board :config="config2" style="width:90%;height:90%" />
                   </div>
                 </dv-border-box-10>
               </div>
               <div class="h-1/2 pt-2">
-                <dv-border-box-10 class="left-chart-container ">
-                  <div class="flex flex-col pt-20">
-                    dv-border-box-3
+                <dv-border-box-10 class="left-chart-container">
+                  <div class="flex flex-col h-full items-center justify-center">
+                    <dv-scroll-ranking-board :config="config3" style="width:90%;height:200px" />
                   </div>
                 </dv-border-box-10>
               </div>
@@ -82,6 +81,7 @@
 </template>
 
 <script>
+import { config, config1, config2, config3 } from "./index.data.js"
 export default {
   name: 'app',
   components: {
@@ -90,51 +90,10 @@ export default {
     return {
       isFullScreen: '',
       vantaEffect: null,
-      config: {
-        data: [
-          {
-            name: '周口',
-            value: 55
-          },
-          {
-            name: '南阳',
-            value: 120
-          },
-          {
-            name: '西峡',
-            value: 78
-          },
-          {
-            name: '驻马店',
-            value: 66
-          },
-          {
-            name: '新乡',
-            value: 80
-          }
-        ],
-        color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b'],
-        radius: '65%',
-        activeRadius: '70%',
-        unit: '单位'
-      },
-      config1: {
-        points:[
-          {
-            name: '郑州',
-            coordinate: [0.48, 0.35]
-          },
-          {
-            name: '新乡',
-            coordinate: [0.52, 0.23]
-          },
-        ],
-        text: {
-          show: true,
-        },
-        k: 0.5,
-        bgImgUrl: "http://www.dituw.net/uploads/allimg/131025/1-131025212613259.jpg"
-      }
+      config,
+      config1,
+      config2,
+      config3,
     }
   },
   onload() {
